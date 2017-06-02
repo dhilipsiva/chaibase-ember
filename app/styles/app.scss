@@ -1,4 +1,27 @@
-@import "variables";
-@import "bootstrap-compass";
-@import "bootstrap";
-@import "gentelella";
+@import "bulma";
+
+$standard-margin: 15px;
+
+$turquoise-light: lighten($turquoise, 5%);
+
+.margin-top {
+  margin-top: $standard-margin;
+}
+
+.margin-left {
+  margin-left: $standard-margin;
+}
+
+.turquoise-light {
+  color: $turquoise-light;
+}
+
+.max-height-128 {
+  max-height: 128px;
+}
+
+.notify-container {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}

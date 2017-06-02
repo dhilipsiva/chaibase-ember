@@ -1,0 +1,29 @@
+section.hero.is-fullheight.is-bold
+  div.hero-body
+    div.container
+      div.columns.is-vcentered
+        div.column.is-4.is-offset-4
+          form.box
+            figure.image
+              img.max-height-128 src="/logo.svg"
+            h2.title.has-text-centered
+              | ChaiBase
+            p.control.has-icon.has-icon-right
+              = input class="input is-large" type="text" value=identification placeholder="identification"
+              span.icon
+                = fa-icon "user"
+            p.control.has-icon.has-icon-right.margin-top
+              = input class="input is-large" type="password" value=password placeholder="password"
+              span.icon
+                = fa-icon "key"
+            hr
+            p.control
+              button.button.is-primary.is-large.is-fullwidth click="authenticate"
+                span.icon.is-large
+                  = fa-icon "unlock"
+                span.margin-left Login
+            hr
+            p.has-text-centered
+              a href="#" Register an account
+            p.has-text-centered
+              a href="#" Forgot password
