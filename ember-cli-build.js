@@ -4,6 +4,13 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
     // Add options here
+    storeConfigInMeta: false,
+    sassOptions: {
+      includePaths: [
+        'bower_components/chaibase-sass/sass',
+      ],
+      onlyIncluded: false
+    }
   });
 
   // Use `app.import` to add additional libraries to the generated
