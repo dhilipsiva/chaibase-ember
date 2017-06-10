@@ -1,4 +1,4 @@
-import uuid from 'chaibase-ember/utils/uuid';
+import uuid from 'chaibase/utils/uuid';
 import { module, test } from 'qunit';
 
 module('Unit | Utility | uuid');

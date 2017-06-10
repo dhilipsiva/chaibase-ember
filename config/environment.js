@@ -2,10 +2,11 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'chaibase-ember',
+    modulePrefix: 'chaibase',
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
+    namespace: "api",
     pace:{
       theme: 'minimal',
       color: 'green',
@@ -24,7 +25,14 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-    }
+    },
+    'ember-simple-auth': {
+      loginEndPoint: 'login',
+      checkEndPoint: 'check',
+      logoutEndPoint: 'logout',
+      routeAfterAuthentication: 'authenticated.index',
+      routeIfAlreadyAuthenticated: 'authenticated.index',
+    },
   };
 
   if (environment === 'development') {
@@ -33,6 +41,7 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV.host = "http://localhost:8000";
   }
 
   if (environment === 'test') {

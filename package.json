@@ -1,7 +1,7 @@
 {
-  "name": "chaibase-ember",
+  "name": "chaibase",
   "version": "0.0.0",
-  "description": "Small description for chaibase-ember goes here",
+  "description": "Small description for chaibase goes here",
   "license": "MIT",
   "author": "",
   "directories": {
