@@ -12,7 +12,7 @@ export default Ember.Component.extend({
       this.get('session').authenticate(
         'authenticator:chaibase', identification, password).catch(
           (reason) => {
-            this.get('notifications').error(reasonOut(reason), {autoClear: true});
+            this.get('notifications').error(reasonOut(reason));
           });
     }
   },
