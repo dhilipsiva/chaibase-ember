@@ -1,4 +1,4 @@
 = menu-pane
 = outlet
 = chaibase-notify
-= notification-container position="top-right"
+= notification-container

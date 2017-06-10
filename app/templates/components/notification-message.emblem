@@ -1,0 +1,4 @@
+| FOO
+= notification.message
+div{action "removeNotification"} title="Dismiss this notification"
+    | X

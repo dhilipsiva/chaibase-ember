@@ -11,6 +11,10 @@ module.exports = function(environment) {
       theme: 'minimal',
       color: 'green',
     },
+    'ember-cli-notifications': {
+      autoClear: true,
+      clearDuration: 1200,
+    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
