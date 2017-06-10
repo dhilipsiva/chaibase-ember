@@ -22,8 +22,9 @@ $turquoise-light: lighten($turquoise, 5%);
   max-height: 128px;
 }
 
-.notify-container {
+.notification-container {
   position: absolute;
   bottom: 5px;
   right: 5px;
+  z-index:100;
 }

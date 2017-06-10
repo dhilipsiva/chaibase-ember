@@ -22,13 +22,12 @@ const Notifications = ArrayProxy.extend({
     }
     const notification = Ember.Object.create({
       message: options.message,
-      type: options.type || 'info',
+      type: options.type || 'is-info',
       onClick: options.onClick,
-      cssClasses: options.cssClasses
     });
 
     this.pushObject(notification);
-    notification.set('remaining', 5000);
+    notification.set('remaining', 50000);
     this.setupAutoClear(notification);
 
     return notification;
@@ -38,28 +37,35 @@ const Notifications = ArrayProxy.extend({
   error(message, options) {
     return this.addNotification(assign({
       message: message,
-      type: 'error'
+      type: 'is-danger'
+    }, options));
+  },
+
+  primary(message, options) {
+    return this.addNotification(assign({
+      message: message,
+      type: 'is-primary'
     }, options));
   },
 
   success(message, options) {
     return this.addNotification(assign({
       message: message,
-      type: 'success'
+      type: 'is-success'
     }, options));
   },
 
   info(message, options) {
     return this.addNotification(assign({
       message: message,
-      type: 'info'
+      type: 'is-info'
     }, options));
   },
 
   warning(message, options) {
     return this.addNotification(assign({
       message: message,
-      type: 'warning'
+      type: 'is-warning'
     }, options));
   },
 

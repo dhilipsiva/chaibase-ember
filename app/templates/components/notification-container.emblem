@@ -1,3 +1,2 @@
 each notifications as |notification|
-  | FOOBAR
   = notification-message notification=notification

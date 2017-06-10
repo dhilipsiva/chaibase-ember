@@ -1,4 +1,2 @@
-| FOO
+button.delete{action "removeNotification"} title="Dismiss this notification"
 = notification.message
-div{action "removeNotification"} title="Dismiss this notification"
-    | X
