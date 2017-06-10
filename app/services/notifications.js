@@ -27,7 +27,7 @@ const Notifications = ArrayProxy.extend({
     });
 
     this.pushObject(notification);
-    this.setupAutoClear(notification, 5000);
+    this.setupAutoClear(notification, ENV.notifications.clearDuration);
 
     return notification;
   },
@@ -78,7 +78,7 @@ const Notifications = ArrayProxy.extend({
     // Delay removal from DOM for dismissal animation
     run.later(this, () => {
       this.removeObject(notification);
-    }, 200);
+    }, ENV.notifications.animationDuration);
   },
 
   setupAutoClear(notification, delay) {

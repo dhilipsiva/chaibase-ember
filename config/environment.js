@@ -11,9 +11,11 @@ module.exports = function(environment) {
       theme: 'minimal',
       color: 'green',
     },
-    'ember-cli-notifications': {
-      autoClear: true,
-      clearDuration: 1200,
+    notifications: {
+      // IMPORTANT:
+      // should be in sync with `animated` class in `_animated.scss`
+      animationDuration: 200, // Millisecons
+      clearDuration: 5000,
     },
     EmberENV: {
       FEATURES: {

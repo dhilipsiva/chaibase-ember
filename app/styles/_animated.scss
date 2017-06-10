@@ -1,4 +1,6 @@
 .animated {
+  // IMPORTANT:
+  // Should be in sync with `notifications.animationDuration` in `environment.js`
   animation-duration: .2s;
   animation-fill-mode: both;
 }
