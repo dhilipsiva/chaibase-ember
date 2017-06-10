@@ -27,8 +27,7 @@ const Notifications = ArrayProxy.extend({
     });
 
     this.pushObject(notification);
-    notification.set('remaining', 50000);
-    this.setupAutoClear(notification);
+    this.setupAutoClear(notification, 5000);
 
     return notification;
   },
@@ -79,20 +78,16 @@ const Notifications = ArrayProxy.extend({
     // Delay removal from DOM for dismissal animation
     run.later(this, () => {
       this.removeObject(notification);
-    }, 500);
+    }, 200);
   },
 
-  setupAutoClear(notification) {
-    notification.set('startTime', Date.now());
-
-    const timer = run.later(this, () => {
+  setupAutoClear(notification, delay) {
+    run.later(this, () => {
       // Hasn't been closed manually
       if (this.indexOf(notification) >= 0) {
         this.removeNotification(notification);
       }
-    }, notification.get('remaining'));
-
-    notification.set('timer', timer);
+    }, delay);
   }
 });
 
