@@ -6,8 +6,6 @@ const assign = Ember.assign || Ember.merge;
 const {
   ArrayProxy,
   A,
-  isEmpty,
-  getWithDefault,
   run,
 } = Ember;
 
