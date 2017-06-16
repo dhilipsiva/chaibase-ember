@@ -1,0 +1,5 @@
+section.hero
+  div.hero-body
+    div.container
+      h1.title Green View Tea Industries
+      h2.subtitle Welcome to ChaiBase

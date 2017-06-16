@@ -1,0 +1,50 @@
+nav.nav
+  div.nav-left
+    a.nav-item
+      img src="/logo.svg"
+    a.nav-item
+      .title.has-text-centered ChaiBase
+
+  span.nav-toggle
+    span
+    span
+    span
+
+  div.nav-right.nav-menu
+    span.nav-item Welcome
+
+    div.nav-item
+      p.control
+        a.button.is-primary
+          span.icon
+            i.fa.fa-download
+          span Download
+
+.columns.no-margin-bottom
+  .column.is-2.hero.is-fullheight.aside
+    .box
+      ul.menu-list
+        li
+          a
+            = fa-icon "users"
+            | People
+        li
+          a
+            = fa-icon "truck"
+            | Vehicles
+        li
+          a
+            = fa-icon "balance-scale"
+            | Weighment
+        li
+          a
+            = fa-icon "sticky-note"
+            | Billing
+
+  .column
+    .cotainer
+      = outlet
+
+footer.footer
+  div.container
+    div.content.has-text-centered PlaceHolder

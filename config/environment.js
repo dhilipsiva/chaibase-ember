@@ -13,7 +13,7 @@ module.exports = function(environment) {
     },
     notifications: {
       // IMPORTANT:
-      // should be in sync with `animated` class in `_animated.scss`
+      // should be in sync with `animated` class in `sass/utilities/_animations.sass`
       animationDuration: 200, // Millisecons
       clearDuration: 5000,
     },
