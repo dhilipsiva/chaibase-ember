@@ -4,7 +4,10 @@ import ENV from 'chaibase/config/environment';
 
 export default Base.extend({
   ajax: Ember.inject.service(),
-  restore(/*data*/) {
+  restore(data) {
+    var ajax = this.get("ajax");
+    var url = [ENV.host, ENV.namespace, ENV['ember-simple-auth']['checkEndPoint']].join("/")
+    return ajax.post(url, {data: data});
   },
 
   authenticate(identification, password) {
@@ -13,6 +16,10 @@ export default Base.extend({
     return ajax.post(url, {data: {identification, password}});
   },
 
-  invalidate(/*data*/) {
-  }
+  invalidate(data) {
+    var ajax = this.get("ajax");
+    var url = [ENV.host, ENV.namespace, ENV['ember-simple-auth']['logoutEndPoint']].join("/")
+    return ajax.post(url, {data: data});
+  },
+
 });

@@ -11,14 +11,12 @@ nav.nav
     span
 
   div.nav-right.nav-menu
-    span.nav-item Welcome
-
     div.nav-item
       p.control
-        a.button.is-primary
+        a.button.is-primary click="invalidate"
           span.icon
-            i.fa.fa-download
-          span Download
+            = fa-icon "sign-out"
+          span Logout
 
 .columns.no-margin-bottom
   .column.is-2.hero.is-fullheight.aside
