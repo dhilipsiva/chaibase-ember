@@ -1,8 +1,7 @@
 nav.nav
   div.nav-left
-    a.nav-item
+    link-to "authenticated.index" class="nav-item"
       img src="/logo.svg"
-    a.nav-item
       .title.has-text-centered ChaiBase
 
   span.nav-toggle
@@ -23,19 +22,19 @@ nav.nav
     .box
       ul.menu-list
         li
-          a
+          a.button.is-primary
             = fa-icon "users"
             | People
         li
-          a
+          a.button.is-primary
             = fa-icon "truck"
             | Vehicles
         li
-          a
+          a.button.is-primary
             = fa-icon "balance-scale"
             | Weighment
         li
-          a
+          a.button.is-primary
             = fa-icon "sticky-note"
             | Billing
 

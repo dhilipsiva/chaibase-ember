@@ -33,7 +33,7 @@ module.exports = function(environment) {
       // when it is created
     },
     endPoints: {
-      fingerprint: 'fingerprint',
+      browser: 'browser',
     },
     'ember-simple-auth': {
       loginEndPoint: 'login',
