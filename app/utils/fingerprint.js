@@ -16,7 +16,6 @@ export default function fingerprint() {
       },
         url = [ENV.host, ENV.namespace, ENV.endPoints.browser, result].join("/")
       return request(url, options).then(response => {
-        debugger
         return response;
       });
     });
