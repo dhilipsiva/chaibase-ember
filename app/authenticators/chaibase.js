@@ -6,20 +6,17 @@ export default Base.extend({
   ajax: Ember.inject.service(),
   restore(data) {
     var ajax = this.get("ajax");
-    var url = [ENV.host, ENV.namespace, ENV['ember-simple-auth']['checkEndPoint']].join("/")
-    return ajax.post(url, {data: data});
+    return ajax.post(ENV['ember-simple-auth']['checkEndPoint'], {data: data});
   },
 
   authenticate(identification, password) {
     var ajax = this.get("ajax");
-    var url = [ENV.host, ENV.namespace, ENV['ember-simple-auth']['loginEndPoint']].join("/")
-    return ajax.post(url, {data: {identification, password}});
+    return ajax.post(ENV['ember-simple-auth']['loginEndPoint'], {data: {identification, password}});
   },
 
   invalidate(data) {
     var ajax = this.get("ajax");
-    var url = [ENV.host, ENV.namespace, ENV['ember-simple-auth']['logoutEndPoint']].join("/")
-    return ajax.post(url, {data: data});
+    return ajax.post(ENV['ember-simple-auth']['logoutEndPoint'], {data: data});
   },
 
 });

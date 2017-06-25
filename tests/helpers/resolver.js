@@ -1,11 +1,11 @@
 import Resolver from '../../resolver';
-import config from '../../config/environment';
+import ENV from 'chaibase/config/environment';
 
 const resolver = Resolver.create();
 
 resolver.namespace = {
-  modulePrefix: config.modulePrefix,
-  podModulePrefix: config.podModulePrefix
+  modulePrefix: ENV.modulePrefix,
+  podModulePrefix: ENV.podModulePrefix
 };
 
 export default resolver;
