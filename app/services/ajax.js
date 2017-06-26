@@ -7,19 +7,11 @@ export default AjaxService.extend({
   namespace: ENV.namespace,
   session: Ember.inject.service(),
   trustedHosts: ['localhost', 'api.chaibase.com'],
-  headers: Ember.computed('session.authToken', function(){
-    let headers = {};
+  headers: Ember.computed('session.data.authenticated.token', function(){
+    return {
+      'Authorization': "Basic " + this.get('session.data.authenticated.token'),
+      'X-Fingerprint': localStorage.fingerprint,
+    };
+  }),
 
-    const authToken = this.get('session.authToken');
-    if (authToken) {
-      headers['auth-token'] = authToken;
-    }
-
-    const fingerprint = localStorage.fingerprint
-    if (fingerprint) {
-      headers['X-Fingerprint'] = fingerprint
-    }
-
-    return headers;
-  })
 });
