@@ -1,8 +1,8 @@
 import Ember from 'ember';
 import Resolver from './resolver';
-import loadInitializers from 'ember-load-initializers';
 import ENV from 'chaibase/config/environment';
 import fingerprint from 'chaibase/utils/fingerprint';
+import loadInitializers from 'ember-load-initializers';
 
 let App;
 

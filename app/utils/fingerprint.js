@@ -1,3 +1,7 @@
+/*global Fingerprint2*/
+/*eslint no-console: ["error", { allow: ["warn", "error"] }] */
+
+import Ember from 'ember';
 import request from 'ember-ajax/request';
 import ENV from 'chaibase/config/environment';
 import randString from 'chaibase/utils/rand-string';
@@ -23,7 +27,7 @@ export default function fingerprint() {
       });
     });
   } catch (e) {
-    console.log("Cannot finigerprint browser.");
+    console.warn("Cannot finigerprint browser.");
     console.error(e);
     if (Ember.isEmpty(localStorage.finigerprint)) {
       localStorage.fingerprint = randString(32);

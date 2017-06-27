@@ -1,6 +1,6 @@
 nav.nav
   div.nav-left
-    link-to "authenticated.index" class="nav-item"
+    = link-to "authenticated.index" class="nav-item"
       img src="/logo.svg"
       .title.has-text-centered ChaiBase
 

@@ -1,9 +1,9 @@
 import Ember from 'ember';
 
-const { inject: { service }, isEmpty, RSVP } = Ember;
+const { Service, inject: { service }, isEmpty, RSVP } = Ember;
 
-export default Ember.Service.extend({
-  session: service('session'),
+export default Service.extend({
+  session: service(),
   store: service(),
 
   load() {
@@ -13,7 +13,7 @@ export default Ember.Service.extend({
         this.set('user', user);
       });
     } else {
-      return Ember.RSVP.resolve();
+      return RSVP.resolve();
     }
   }
 });
