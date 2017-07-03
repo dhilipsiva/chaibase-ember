@@ -2,7 +2,8 @@ nav.nav
   div.nav-left
     = link-to "authenticated.index" class="nav-item"
       img src="/logo.svg"
-      .title.has-text-centered ChaiBase
+      .title.has-text-centered
+        | ChaiBase
 
   span.nav-toggle
     span
@@ -10,6 +11,8 @@ nav.nav
     span
 
   div.nav-right.nav-menu
+    div.nav-item
+      = model.username
     div.nav-item
       p.control
         a.button.is-primary click="invalidate"

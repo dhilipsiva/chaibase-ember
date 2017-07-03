@@ -1,4 +1,4 @@
-section.hero.is-fullheight.is-bold
+section.hero.is-fullheight.is-bold.animated.zoomIn
   div.hero-body
     div.container
       div.columns.is-vcentered

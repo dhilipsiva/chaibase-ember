@@ -5,7 +5,7 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
   session: Ember.inject.service(),
   actions: {
     invalidate(){
-      this.get('session').invalidate()
+      return this.get('session').invalidate();
     }
   }
 });
