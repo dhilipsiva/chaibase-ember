@@ -7,7 +7,7 @@ export default Ember.Route.extend(ApplicationRouteMixin, {
   currentUser: service(),
   routeAfterAuthentication: 'authenticated.index',
 
-  beforeModel() {
+  beforeModel(transition) {
     return this._loadCurrentUser();
   },
 
@@ -18,6 +18,6 @@ export default Ember.Route.extend(ApplicationRouteMixin, {
 
   _loadCurrentUser() {
     return this.get('currentUser').load().catch(() => this.get('session').invalidate());
-  }
+  },
 
 });

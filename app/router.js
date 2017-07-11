@@ -11,6 +11,7 @@ Router.map(function() {
   this.route('authenticated', {path: '/'}, function() {
     this.route('index', {path: '/'});
   });
+  this.route('factories');
 });
 
 export default Router;

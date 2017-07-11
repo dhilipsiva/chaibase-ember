@@ -1,0 +1,9 @@
+= yield
+
+.columns
+  .column.is-4.is-offset-4.has-text-centered
+    h3.title.is-3 Please choose a factory
+    each model as |factory|
+      hr
+      a.button.is-primary.is-large.is-fullwidth{{action "selectFactory" factory.id on="click"}}
+        = factory.name

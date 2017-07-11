@@ -10,7 +10,7 @@ export default AjaxService.extend({
   headers: Ember.computed('session.data.authenticated.token', function(){
     return {
       'Authorization': "Basic " + this.get('session.data.authenticated.token'),
-      'X-Fingerprint': localStorage.fingerprint,
+      'X-Fingerprint': localStorage.getItem("fingerprint"),
     };
   }),
 

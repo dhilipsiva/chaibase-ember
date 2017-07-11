@@ -1,5 +1,6 @@
 section.hero
   div.hero-body
     div.container
-      h1.title Green View Tea Industries
+      h1.title
+        = model.name
       h2.subtitle Welcome to ChaiBase
