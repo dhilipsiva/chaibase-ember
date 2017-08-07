@@ -5,9 +5,9 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
   session: Ember.inject.service(),
 
   beforeModel(transition) {
+    this._super(...arguments);
     var currentFactoryId = localStorage.getItem("currentFactoryId");
     if(Ember.isEmpty(currentFactoryId)){
-      debugger
       return this.transitionTo("factories");
     }
   },

@@ -10,8 +10,8 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
       this.transitionTo('factories.create');
     }
     else if (factories.get('length') === 1) {
-      factory = factories.get('firstObject');
-      this.send("selectFactory", factory.get(id));
+      let factory = factories.get('firstObject');
+      transition.send("selectFactory", factory.get("id"));
     }
   },
   actions: {
